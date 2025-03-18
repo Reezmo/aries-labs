@@ -5,52 +5,53 @@ import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 const data = [
   {
     name: "Jan",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 450,
   },
   {
     name: "Feb",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 380,
   },
   {
     name: "Mar",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 420,
   },
   {
     name: "Apr",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 390,
   },
   {
     name: "May",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 410,
   },
   {
     name: "Jun",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 430,
   },
   {
     name: "Jul",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 460,
   },
   {
     name: "Aug",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 400,
   },
   {
     name: "Sep",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 370,
   },
   {
     name: "Oct",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 440,
   },
   {
     name: "Nov",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 480,
   },
   {
     name: "Dec",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: 470,
   },
+ 
 ]
 
 export function Graph() {
@@ -69,7 +70,7 @@ export function Graph() {
           fontSize={12}
           tickLine={false}
           axisLine={false}
-          tickFormatter={(value) => `$${value}`}
+          tickFormatter={(value) => `${value}`}
         />
         <Bar
           dataKey="total"

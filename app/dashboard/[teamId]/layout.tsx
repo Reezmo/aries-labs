@@ -2,73 +2,89 @@
 
 import SidebarLayout, { SidebarItem } from "@/components/sidebar-layout";
 import { SelectedTeamSwitcher, useUser } from "@stackframe/stack";
-import { BadgePercent, BarChart4, Columns3, Globe, Locate, Settings2, ShoppingBag, ShoppingCart, Users } from "lucide-react";
+import { BadgePercent, BarChart4, Columns3, Globe, Settings2, ShoppingCart, Users } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 
 const navigationItems: SidebarItem[] = [
   {
-    name: "Overview",
+    name: "Usage Overview",
     href: "/",
     icon: Globe,
     type: "item",
   },
   {
     type: 'label',
-    name: 'Management',
+    name: 'Workflows',
   },
   {
-    name: "Products",
-    href: "/products",
-    icon: ShoppingBag,
-    type: "item",
-  },
-  {
-    name: "People",
-    href: "/people",
-    icon: Users,
-    type: "item",
-  },
-  {
-    name: "Segments",
-    href: "/segments",
-    icon: Columns3,
-    type: "item",
-  },
-  {
-    name: "Regions",
-    href: "/regions",
-    icon: Locate,
-    type: "item",
-  },
-  {
-    type: 'label',
-    name: 'Monetization',
-  },
-  {
-    name: "Revenue",
-    href: "/revenue",
+    name: "Workflows used vs. limit",
+    href: "/workflows-used-vs-limit",
     icon: BarChart4,
     type: "item",
   },
   {
-    name: "Orders",
-    href: "/orders",
-    icon: ShoppingCart,
+    name: "Task executions used vs. limit",
+    href: "/task-executions-used-vs-limit",
+    icon: Columns3,
     type: "item",
   },
   {
-    name: "Discounts",
-    href: "/discounts",
-    icon: BadgePercent,
+    name: "Team members vs. limit",
+    href: "/team-members-vs-limit",
+    icon: Users,
     type: "item",
   },
   {
     type: 'label',
-    name: 'Settings',
+    name: 'Integrations',
   },
   {
-    name: "Configuration",
-    href: "/configuration",
+    name: "Basic Integrations",
+    href: "/basic-integrations",
+    icon: Globe,
+    type: "item",
+  },
+  {
+    name: "Advanced Integrations",
+    href: "/advanced-integrations",
+    icon: Globe,
+    type: "item",
+  },
+  {
+    type: 'label',
+    name: 'Analytics',
+  },
+  {
+    name: "Total Automations Run",
+    href: "/total-automations-run",
+    icon: BarChart4,
+    type: "item",
+  },
+  {
+    name: "Average Execution Time",
+    href: "/average-execution-time",
+    icon: Columns3,
+    type: "item",
+  },
+  {
+    name: "Success Rate",
+    href: "/success-rate",
+    icon: BadgePercent,
+    type: "item",
+  },
+  {
+    name: "Failed Executions",
+    href: "/failed-executions",
+    icon: ShoppingCart,
+    type: "item",
+  },
+  {
+    type: 'label',
+    name: 'Support Section',
+  },
+  {
+    name: "Support Tickets",
+    href: "/support-tickets",
     icon: Settings2,
     type: "item",
   },
