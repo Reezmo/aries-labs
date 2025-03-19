@@ -26,18 +26,18 @@ export default async function IndexPage() {
     <>
       <Hero
         capsuleText="Automate your business with Aries Labs"
-        capsuleLink="https://stacktemplate.com"
+        capsuleLink="/"
         title="We build hands-off growth systems for B2B founders"
-        subtitle="Aries Labs is a software that helps you generate up to 1000 email accounts. As a result, you can send cold emails at scale and get more clients than you can handle."
+        subtitle="Find the perfect offer, automate your lead acquisition, & solve your project management woes—all while scaling your B2B business to 8 figures."
         primaryCtaText="Get Started"
         primaryCtaLink={stackServerApp.urls.signUp}
         secondaryCtaText="View Pricing"
-        secondaryCtaLink="https://github.com/"
+        secondaryCtaLink="/"
         credits={
           <>
             Crafted with ❤️ by{" "}
             <a
-              href="https://stack-auth.com"
+              href="https://github.com"
               target="_blank"
               rel="noreferrer"
               className="underline"
