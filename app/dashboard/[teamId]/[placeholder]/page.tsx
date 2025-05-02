@@ -1,7 +1,9 @@
+import ErrorMessage from "@/components/error-message";
+
 export default function Page() {
   return (
     <div>
-      <h1>Example Page</h1>
+      <ErrorMessage />
     </div>
   )
 }
