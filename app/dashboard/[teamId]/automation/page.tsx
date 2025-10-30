@@ -1,10 +1,6 @@
-import ErrorMessage from '@/components/error-message'
-import React from 'react'
+import { redirect } from "next/navigation";
 
 export default function Automation() {
-  return (
-    <div>
-      <ErrorMessage />
-    </div>
-  )
+  redirect("/");
+  return null;
 }

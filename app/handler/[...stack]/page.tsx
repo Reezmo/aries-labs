@@ -1,6 +1,6 @@
-import { stackServerApp } from "@/stack";
-import { StackHandler } from "@stackframe/stack";
+import { redirect } from "next/navigation";
 
-export default function Handler(props: unknown) {
-  return <StackHandler fullPage app={stackServerApp} routeProps={props} />;
+export default function Handler(_props: unknown) {
+  // Authentication/handler routes removed — redirect to landing
+  redirect("/");
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useStackApp, useUser } from "@stackframe/stack";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
@@ -19,51 +18,7 @@ interface NavProps {
   }[];
 }
 
-function SignInSignUpButtons() {
-  const app = useStackApp();
-  return (
-    <>
-      <Link
-        href={app.urls.signIn}
-        className={buttonVariants({ variant: "secondary" })}
-      >
-        Sign In
-      </Link>
-
-      <Link
-        href={app.urls.signUp}
-        className={buttonVariants({ variant: "default" })}
-      >
-        Sign Up
-      </Link>
-    </>
-  );
-}
-
-function AuthButtonsInner() {
-  const user = useUser();
-
-  if (user) {
-    return (
-      <Link
-        href="/dashboard"
-        className={buttonVariants({ variant: "default" })}
-      >
-        Dashboard
-      </Link>
-    );
-  } else {
-    return <SignInSignUpButtons />;
-  }
-}
-
-function AuthButtons() {
-  return (
-    <React.Suspense fallback={<SignInSignUpButtons />}>
-      <AuthButtonsInner />
-    </React.Suspense>
-  );
-}
+// Auth removed — no sign in / sign up buttons for the landing page header
 
 function MobileItems(props: NavProps) {
   return (
@@ -85,9 +40,7 @@ function MobileItems(props: NavProps) {
             </Link>
           ))}
 
-          <div className="flex flex-col gap-2 mt-4">
-            <AuthButtons />
-          </div>
+          {/* auth buttons removed */}
         </nav>
       </div>
     </div>
@@ -151,9 +104,7 @@ export function LandingPageHeader(props: NavProps) {
 
         <div className="flex gap-4 items-center">
           <ColorModeSwitcher />
-          <nav className="gap-4 items-center hidden md:flex">
-            <AuthButtons />
-          </nav>
+          {/* auth buttons removed */}
         </div>
       </div>
     </header>

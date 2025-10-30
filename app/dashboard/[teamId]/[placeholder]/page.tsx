@@ -1,9 +1,7 @@
-import ErrorMessage from "@/components/error-message";
+import { redirect } from "next/navigation";
 
 export default function Page() {
-  return (
-    <div>
-      <ErrorMessage />
-    </div>
-  )
+  // Placeholder page removed — redirect to landing
+  redirect("/");
+  return null;
 }

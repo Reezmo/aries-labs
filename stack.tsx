@@ -1,10 +1,10 @@
-import "server-only";
-
-import { StackServerApp } from "@stackframe/stack";
-
-export const stackServerApp = new StackServerApp({
-  tokenStore: "nextjs-cookie",
+// Stack integration removed. Export a minimal stub that provides the
+// `urls` object used by the landing page. This avoids importing and
+// constructing the real `@stackframe/stack` server app.
+export const stackServerApp = {
   urls: {
-    afterSignIn: "/dashboard",
-  }
-});
+    afterSignIn: "/",
+    signUp: "/",
+    signIn: "/",
+  },
+} as const;

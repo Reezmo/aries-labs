@@ -1,9 +1,10 @@
-import { PageClient } from "./page-client";
+import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Dashboard",
+  title: "Dashboard (removed)",
 };
 
 export default function Dashboard() {
-  return <PageClient />;
+  // Dashboard routes removed — redirect to landing page
+  redirect("/");
 }
